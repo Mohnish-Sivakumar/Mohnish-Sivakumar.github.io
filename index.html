@@ -1,62 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Mohnish Sivkaumar Portfolio</title>
-</head>
-<body>
-    <section>
-    <div>
-        <div class="animate__animated animate__slideInDown layer dark_layer">
-          <div class="text_container">
-            <h1 >Mohnish <br> Sivakumar</h1>
-          </div>
-        </div>
-          <div class="layer layer_red">
-            <div class = "second" >
-                <h1 class = "part1">Don't Yuck My Yum!</h1>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <!-- Icon -->
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- MDB UI KIT -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css">
+
+    <!-- Custom styles -->
+    <style>
+      .text-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
+  </head>
+
+
+  <body>
+    <h1>Drive Team Info:</h1>
+
+    <div class = "grid">
+
+        <form id = "fetch" data-role="validator" action="javascript:">
+            <div class="row mb-2">
+                <div class="cell-md-6">
+                    <label>Team 1:</label>
+                    <input id="team1"
+                        data-validate="required team"
+                        placeholder="Enter team" data-role="input">
+                    <span class="invalid_feedback">
+                        Input correct team 
+                    </span>
+                </div>
+                <div class="cell-md-6">
+                    <label>Team 2:</label>
+                    <input id="team2"
+                        data-validate="required team"
+                        placeholder="Enter team" data-role="input">
+                    <span class="invalid_feedback">
+                        Input correct team
+                    </span>
+                </div>
             </div>
-        </div>
-        <div class="card animate__animated animate__fadeInDown">
-                <p>I absolutely love Robotics and it has been a major passion of mine since I was very young. I have been doing Robotics for 3 years and am excited to create more memories.</p>
-            <h3>Robotics~</h3>
-        </div>
-        <img class = "v animate__animated animate__fadeInTopRight" src = 'Assets/image 1.png'>
-        <div class = "card2 animate__animated animate__fadeInRight">
-            <p>Another detail about me, is that KPOP is my favorite type of music to listen to. Some of my favorite KPOP groups include Stray Kids, BTS, Enhypen, and many more! Taehyung, Niki, and Felix are my favorite KPOP band members. Feel free to talk to me about it, we'll go on and on!</p>
-            <h3>KPOP~</h3>
-        </div>
-        <img class = 'felix animate__animated animate__fadeInBottomLeft' src = 'Assets/image 2.png'>
+            <div class="row mb-2">
+                <div class="cell-md-6">
+                    <label>Team 3:</label>
+                    <input id="team3"
+                        data-validate="required team"
+                        placeholder="Enter team" data-role="input">
+                    <span class="invalid_feedback">
+                        Input correct team
+                    </span>
+                </div>
+                <div class="cell-md-6">
+                    <label>Team 4:</label>
+                    <input id="team4"
+                        data-validate="required team"
+                        placeholder="Enter team" data-role="input">
+                    <span class="invalid_feedback">
+                        Input correct team
+                    </span>
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <button class="button success">Fetch data</button>
+                <input type="button" class="button" value="Cancel">
+            </div>
+            </form>
+            <br></br>
+            <div class="container">
+              <!-- Table -->
+              <table class="table">
+                <thead id="table-head1"></thead>
+                <tbody id="table-body1"></tbody>
+              </table>
+              
+              <!-- Table -->
+            </div>
+            <br></br>
 
-        <div class = "card3 animate__animated animate__fadeInDown">
-            <p>Hi! My name is Mohnish Sivakumar and I'm a sophomore here in Whitney High School. Welcome to my portfolio where I will be sharing with you all the things that I like (as well as a few shameless plugs)!</p>
-            <h3>About Me!~</h3>
-        </div>
-        <img class = 'robotics1 animate__animated animate__fadeInTopLeft' src = 'Assets/image 3.png'>
-        <div class = "card4 animate__animated animate__fadeInLeft">
-            <p>Although I don't really use my socials, it would still be greatly appreciated to follow me on Instagram(mohn_siv) , or even Github? Definitely looking to start using my socials instead of leaving them to waste!</p>
-            <h3>Socials~</h3>
-        </div>
-        <img class = 'robotics2 animate__animated animate__fadeInBottomRight' src = 'Assets/image 4.png'>
-    </div>
-</section>
-<section>
-    <div class = "End">
-        <h1 class = "thanks">Here are two<br>websites I work on!</h1>
-        <img class = "sima" src = 'Assets/sima.png'>
-        <img class = "robotics_pic" src = 'Assets/Logo.png'>
+            <div class="container">
+              <!-- Table -->
+              <table class="table">
+                <thead id="table-head2"></thead>
+                <tbody id="table-body2"></tbody>
+              </table>
+            </div>
+            <br></br>
 
-        <div class = "banner-btn">
-            <a class = "btn1" href = "https://www.simala.net/"><span></span>SIMA Website</a>
-            <a class = "btn2" href = "https://www.whitneyrobotics.org/"><span></span>Robotics Website</a>
-        </div>
-    </div>
-           
-</section>
-<script src="script.js"></script>
-</body>
+            <div class="container">
+              <!-- Table -->
+              <table class="table">
+                <thead id="table-head3"></thead>
+                <tbody id="table-body3"></tbody>
+              </table>
+            </div>
+            <br></br>
+
+            <div class="container">
+              <!-- Table -->
+              <table class="table">
+                <thead id="table-head4"></thead>
+                <tbody id="table-body4"></tbody>
+              </table>
+            </div>
+
+    <!-- Metro UI -->
+    <script src="https://cdn.metroui.org.ua/current/metro.js"></script>
+  <!-- MDB ESSENTIAL -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Google API -->
+  <script src="https://apis.google.com/js/api.js"></script>
+  <!-- easyData -->
+  <script type="text/javascript" src="js/easyData-google-sheets.js"></script>
+
+  <!-- easyData - Creating table -->
+  <script>
+    {
+      {
+        let range;
+        let counter;
+        // Your API KEY
+        const API_KEY = "AIzaSyB28neRq-OsZuZKcFG8A5-V4t61L_tl1fs";
+        const teams = ["","","",""]
+
+        function displayResult2(response, index) {
+          let tableHead = "";
+          let tableBody = "";
+
+          response.result.values.forEach((row, rowIndex) => {
+              if (rowIndex === 0) {
+                  tableHead += "<tr>";
+                  row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+                  tableHead += "</tr>";
+              } else {
+                  tableBody += "<tr>";
+                  row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+                  tableBody += "</tr>";
+              }
+          });
+
+          document.getElementById("table-head" + (index + 1)).innerHTML = tableHead;
+          document.getElementById("table-body" + (index + 1)).innerHTML = tableBody;
+      }
+
+
+        window.addEventListener("load", (e) => {
+          initOAuthClient({ apiKey: API_KEY });
+        });
+        const fetchData = document.getElementById('fetch')
+        const spreadsheetId = "1lUVRZeL8-v6Fm2ajJCUxlGMRezQgcdr_Zzixwz6b_y8";
+       
+
+        fetchData.addEventListener("submit", (e) => {
+            var team1 = document.getElementById("team1").value;
+            var team2 = document.getElementById("team2").value;
+            var team3 = document.getElementById("team3").value;
+            var team4 = document.getElementById("team4").value;
+
+            const teams = [team1, team2, team3, team4];
+
+            teams.forEach((team, index) => {
+                const range = team + "!A:Z";
+                getPublicValues({ spreadsheetId, range }, (response) => {
+                    displayResult2(response, index); // Pass index to capture current iteration
+                });
+            });
+        });
+      }
+    }
+  </script>
 </html>
