@@ -81,9 +81,11 @@
                 </div>
             </div>
             <div class="form-group text-center">
-                <button class="button success">Fetch data</button>
-                <input type="button" class="button" value="Cancel">
+                <button class="button success" id = "teams">About Team</button>
             </div>
+            <div class="form-group text-center">
+              <button class="button" id = "strategy">Team Strategy</button>
+          </div>
             </form>
             <br></br>
             <div class="container">
@@ -122,7 +124,6 @@
                 <tbody id="table-body4"></tbody>
               </table>
             </div>
-
     <!-- Metro UI -->
     <script src="https://cdn.metroui.org.ua/current/metro.js"></script>
   <!-- MDB ESSENTIAL -->
@@ -166,11 +167,13 @@
         window.addEventListener("load", (e) => {
           initOAuthClient({ apiKey: API_KEY });
         });
-        const fetchData = document.getElementById('fetch')
+        const fetchData = document.getElementById('teams')
+        const strategy = document.getElementById('strategy')
+
         const spreadsheetId = "1lUVRZeL8-v6Fm2ajJCUxlGMRezQgcdr_Zzixwz6b_y8";
        
 
-        fetchData.addEventListener("submit", (e) => {
+        fetchData.addEventListener("click", (e) => {
             var team1 = document.getElementById("team1").value;
             var team2 = document.getElementById("team2").value;
             var team3 = document.getElementById("team3").value;
@@ -179,7 +182,23 @@
             const teams = [team1, team2, team3, team4];
 
             teams.forEach((team, index) => {
-                const range = team + "!A:Z";
+                const range = team + "!A:D";
+                getPublicValues({ spreadsheetId, range }, (response) => {
+                    displayResult2(response, index); // Pass index to capture current iteration
+                });
+            });
+        });
+
+        strategy.addEventListener("click", (e) => {
+            var team1 = document.getElementById("team1").value;
+            var team2 = document.getElementById("team2").value;
+            var team3 = document.getElementById("team3").value;
+            var team4 = document.getElementById("team4").value;
+
+            const teams = [team1, team2, team3, team4];
+
+            teams.forEach((team, index) => {
+                const range = team + "!F:I";
                 getPublicValues({ spreadsheetId, range }, (response) => {
                     displayResult2(response, index); // Pass index to capture current iteration
                 });
