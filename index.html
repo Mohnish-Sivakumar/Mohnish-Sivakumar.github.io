@@ -182,7 +182,7 @@
             const teams = [team1, team2, team3, team4];
 
             teams.forEach((team, index) => {
-                const range = team + "!A:D";
+                const range = team + "!A:E";
                 getPublicValues({ spreadsheetId, range }, (response) => {
                     displayResult2(response, index); // Pass index to capture current iteration
                 });
@@ -198,7 +198,7 @@
             const teams = [team1, team2, team3, team4];
 
             teams.forEach((team, index) => {
-                const range = team + "!F:I";
+                const range = team + "!G:J";
                 getPublicValues({ spreadsheetId, range }, (response) => {
                     displayResult2(response, index); // Pass index to capture current iteration
                 });
