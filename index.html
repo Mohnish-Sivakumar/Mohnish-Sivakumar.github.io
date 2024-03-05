@@ -25,11 +25,28 @@
 
     <!-- Custom styles -->
     <style>
-      .text-center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* Style for the success button */
+  #teams {
+    margin-right: 10px; /* Adjust the spacing between buttons */
+  }
+
+  /* Style for the normal buttons */
+  #strategy {
+    background-color: #ffdd00;
+
+    margin-right: 10px; /* Adjust the spacing between buttons */
+  }
+
+  #awards{
+    background-color: rgb(255, 90, 90);
+  }
     </style>
   </head>
 
@@ -82,10 +99,10 @@
             </div>
             <div class="form-group text-center">
                 <button class="button success" id = "teams">About Team</button>
+                <button class="button" id = "strategy">Team Strategy</button>
+                <button class="button" id = "awards">Team Awards</button>
+
             </div>
-            <div class="form-group text-center">
-              <button class="button" id = "strategy">Team Strategy</button>
-          </div>
             </form>
             <br></br>
             <div class="container">
@@ -169,6 +186,7 @@
         });
         const fetchData = document.getElementById('teams')
         const strategy = document.getElementById('strategy')
+        const awards = document.getElementById('awards')
 
         const spreadsheetId = "1lUVRZeL8-v6Fm2ajJCUxlGMRezQgcdr_Zzixwz6b_y8";
        
@@ -199,6 +217,22 @@
 
             teams.forEach((team, index) => {
                 const range = team + "!G:J";
+                getPublicValues({ spreadsheetId, range }, (response) => {
+                    displayResult2(response, index); // Pass index to capture current iteration
+                });
+            });
+        });
+
+        awards.addEventListener("click", (e) => {
+            var team1 = document.getElementById("team1").value;
+            var team2 = document.getElementById("team2").value;
+            var team3 = document.getElementById("team3").value;
+            var team4 = document.getElementById("team4").value;
+
+            const teams = [team1, team2, team3, team4];
+
+            teams.forEach((team, index) => {
+                const range = team + "!L:M";
                 getPublicValues({ spreadsheetId, range }, (response) => {
                     displayResult2(response, index); // Pass index to capture current iteration
                 });
