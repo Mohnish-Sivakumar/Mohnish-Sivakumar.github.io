@@ -100,7 +100,7 @@
             <div class="form-group text-center">
                 <button class="button success" id = "teams">About Team</button>
                 <button class="button" id = "strategy">Team Strategy</button>
-                <button class="button" id = "awards">Team Awards</button>
+                <!-- <button class="button" id = "awards">Team Awards</button> -->
 
             </div>
             </form>
@@ -186,7 +186,7 @@
         });
         const fetchData = document.getElementById('teams')
         const strategy = document.getElementById('strategy')
-        const awards = document.getElementById('awards')
+        // const awards = document.getElementById('awards')
 
         const spreadsheetId = "1lUVRZeL8-v6Fm2ajJCUxlGMRezQgcdr_Zzixwz6b_y8";
        
@@ -223,21 +223,21 @@
             });
         });
 
-        awards.addEventListener("click", (e) => {
-            var team1 = document.getElementById("team1").value;
-            var team2 = document.getElementById("team2").value;
-            var team3 = document.getElementById("team3").value;
-            var team4 = document.getElementById("team4").value;
+        // awards.addEventListener("click", (e) => {
+        //     var team1 = document.getElementById("team1").value;
+        //     var team2 = document.getElementById("team2").value;
+        //     var team3 = document.getElementById("team3").value;
+        //     var team4 = document.getElementById("team4").value;
 
-            const teams = [team1, team2, team3, team4];
+        //     const teams = [team1, team2, team3, team4];
 
-            teams.forEach((team, index) => {
-                const range = team + "!L:M";
-                getPublicValues({ spreadsheetId, range }, (response) => {
-                    displayResult2(response, index); // Pass index to capture current iteration
-                });
-            });
-        });
+        //     teams.forEach((team, index) => {
+        //         const range = team + "!L:M";
+        //         getPublicValues({ spreadsheetId, range }, (response) => {
+        //             displayResult2(response, index); // Pass index to capture current iteration
+        //         });
+        //     });
+        // });
       }
     }
   </script>
